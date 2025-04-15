@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.6">
+<title>complete API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>complete</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="complete.AIPlayer"><code class="flex name class">
+<span>class <span class="ident">AIPlayer</span></span>
+<span>(</span><span>symbol: str)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class AIPlayer(Player):
+    &#34;&#34;&#34;
+    Represents an AI player using the minimax algorithm.
+    &#34;&#34;&#34;
+    def __init__(self, symbol: str) -&gt; None:
+        super().__init__(symbol)
+
+    def minimax(self, board: Board, depth: int, is_maximizing: bool) -&gt; int:
+        &#34;&#34;&#34;
+        Implements the minimax algorithm to determine the best move.
+        :param board: The game board instance.
+        :param depth: The current depth of recursion.
+        :param is_maximizing: Boolean indicating of maximizing or minimizing.
+        :return: The best score for the current state.
+        &#34;&#34;&#34;
+        opponent = &#34;O&#34; if self.symbol == &#34;X&#34; else &#34;X&#34;
+        if board.is_winner(self.symbol):
+            return 1
+        elif board.is_winner(opponent):
+            return -1
+        elif board.is_full():
+            return 0
+
+        if is_maximizing:
+            best_score = -float(&#34;inf&#34;)
+            for row, col in board.available_moves():
+                board.make_move(row, col, self.symbol)
+                score = self.minimax(board, depth + 1, False)
+                board.undo_move(row, col)
+                best_score = max(score, best_score)
+            return best_score
+        else:
+            best_score = float(&#34;inf&#34;)
+            for row, col in board.available_moves():
+                board.make_move(row, col, opponent)
+                score = self.minimax(board, depth + 1, True)
+                board.undo_move(row, col)
+                best_score = min(score, best_score)
+            return best_score
+
+    def get_move(self, board: Board) -&gt; tuple[int, int]:
+        &#34;&#34;&#34;
+        Determines the best move for the AI player.
+        :param board: The game board instance.
+        :return: A tuple (row, column) representing the best move.
+        &#34;&#34;&#34;
+        best_score = -float(&#34;inf&#34;)
+        best_move = None
+        for row, col in board.available_moves():
+            board.make_move(row, col, self.symbol)
+            score = self.minimax(board, 0, False)
+            board.undo_move(row, col)
+            if score &gt; best_score:
+                best_score = score
+                best_move = (row, col)
+        return best_move</code></pre>
+</details>
+<div class="desc"><p>Represents an AI player using the minimax algorithm.</p>
+<p>Initializes the player with a given symbol ('X' or 'O').
+:param symbol: The player's symbol.</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="complete.Player" href="#complete.Player">Player</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="complete.AIPlayer.get_move"><code class="name flex">
+<span>def <span class="ident">get_move</span></span>(<span>self, board: <a title="complete.Board" href="#complete.Board">Board</a>) ‑> tuple[int, int]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_move(self, board: Board) -&gt; tuple[int, int]:
+    &#34;&#34;&#34;
+    Determines the best move for the AI player.
+    :param board: The game board instance.
+    :return: A tuple (row, column) representing the best move.
+    &#34;&#34;&#34;
+    best_score = -float(&#34;inf&#34;)
+    best_move = None
+    for row, col in board.available_moves():
+        board.make_move(row, col, self.symbol)
+        score = self.minimax(board, 0, False)
+        board.undo_move(row, col)
+        if score &gt; best_score:
+            best_score = score
+            best_move = (row, col)
+    return best_move</code></pre>
+</details>
+<div class="desc"><p>Determines the best move for the AI player.
+:param board: The game board instance.
+:return: A tuple (row, column) representing the best move.</p></div>
+</dd>
+<dt id="complete.AIPlayer.minimax"><code class="name flex">
+<span>def <span class="ident">minimax</span></span>(<span>self,<br>board: <a title="complete.Board" href="#complete.Board">Board</a>,<br>depth: int,<br>is_maximizing: bool) ‑> int</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def minimax(self, board: Board, depth: int, is_maximizing: bool) -&gt; int:
+    &#34;&#34;&#34;
+    Implements the minimax algorithm to determine the best move.
+    :param board: The game board instance.
+    :param depth: The current depth of recursion.
+    :param is_maximizing: Boolean indicating of maximizing or minimizing.
+    :return: The best score for the current state.
+    &#34;&#34;&#34;
+    opponent = &#34;O&#34; if self.symbol == &#34;X&#34; else &#34;X&#34;
+    if board.is_winner(self.symbol):
+        return 1
+    elif board.is_winner(opponent):
+        return -1
+    elif board.is_full():
+        return 0
+
+    if is_maximizing:
+        best_score = -float(&#34;inf&#34;)
+        for row, col in board.available_moves():
+            board.make_move(row, col, self.symbol)
+            score = self.minimax(board, depth + 1, False)
+            board.undo_move(row, col)
+            best_score = max(score, best_score)
+        return best_score
+    else:
+        best_score = float(&#34;inf&#34;)
+        for row, col in board.available_moves():
+            board.make_move(row, col, opponent)
+            score = self.minimax(board, depth + 1, True)
+            board.undo_move(row, col)
+            best_score = min(score, best_score)
+        return best_score</code></pre>
+</details>
+<div class="desc"><p>Implements the minimax algorithm to determine the best move.
+:param board: The game board instance.
+:param depth: The current depth of recursion.
+:param is_maximizing: Boolean indicating of maximizing or minimizing.
+:return: The best score for the current state.</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="complete.Board"><code class="flex name class">
+<span>class <span class="ident">Board</span></span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Board:
+    &#34;&#34;&#34;
+    Represents the Tic-Tac-Toe board and provides methods for game logic.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;
+        Initializes the board as a 3x3 grid filled with &#34;-&#34;.
+        &#34;&#34;&#34;
+        self.board: list[list[str]] = [
+            [&#34;-&#34; for _ in range(3)]
+            for _ in range(3)
+        ]
+
+    def print_board(self) -&gt; None:
+        &#34;&#34;&#34;
+        Prints the current state of the board with numbered positions.
+        &#34;&#34;&#34;
+        for row in range(3):
+            for col in range(3):
+                if self.board[row][col] in &#34;XO&#34;:
+                    print(self.board[row][col])
+                else:
+                    print(row * 3 + col + 1, end=&#34; &#34;)
+            print(&#34;&#34;)
+
+    def is_full(self) -&gt; bool:
+        &#34;&#34;&#34;
+        Checks if the board is full (no empty spaces left).
+        :return: True if the board is full, False otherwise.
+        &#34;&#34;&#34;
+        return all(cell in &#34;XO&#34; for row in self.board for cell in row)
+
+    def is_winner(self, symbol: str) -&gt; bool:
+        &#34;&#34;&#34;
+        Checks if a given player has won the game.
+        :param symbol: The player&#39;s symbol (&#39;X&#39; or &#39;O&#39;).
+        :return: True if the player has won, False otherwise.
+        &#34;&#34;&#34;
+        for i in range(3):
+            if all(self.board[i][j] == symbol for j in range(3)) or \
+               all(self.board[j][i] == symbol for j in range(3)):
+                return True
+        return (
+            all(self.board[i][i] == symbol for i in range(3)) or
+            all(self.board[i][2 - i] == symbol for i in range(3))
+        )
+
+    def available_moves(self) -&gt; list[tuple[int, int]]:
+        &#34;&#34;&#34;
+        Returns a list of available moves on the board.
+        :return: List of tuples representing available (row, column) positions.
+        &#34;&#34;&#34;
+        available = []
+        for row in range(3):
+            for col in range(3):
+                if self.board[row][col] == &#34;-&#34;:
+                    available.append((row, col))
+
+        return available
+
+    def make_move(self, row: int, col: int, symbol: str) -&gt; bool:
+        &#34;&#34;&#34;
+        Places a move on the board if the position is available.
+        :param row: Row index (0-2).
+        :param col: Column index (0-2).
+        :param symbol: The player&#39;s symbol (&#39;X&#39; or &#39;O&#39;).
+        :return: True if the move was successful, False otherwise.
+        &#34;&#34;&#34;
+        if self.board[row][col] == &#34;-&#34;:
+            self.board[row][col] = symbol
+            return True
+        return False
+
+    def undo_move(self, row: int, col: int) -&gt; None:
+        &#34;&#34;&#34;
+        Reverts a move at the given position.
+        :param row: Row index (0-2).
+        :param col: Column index (0-2).
+        &#34;&#34;&#34;
+        self.board[row][col] = &#34;-&#34;</code></pre>
+</details>
+<div class="desc"><p>Represents the Tic-Tac-Toe board and provides methods for game logic.</p>
+<p>Initializes the board as a 3x3 grid filled with "-".</p></div>
+<h3>Methods</h3>
+<dl>
+<dt id="complete.Board.available_moves"><code class="name flex">
+<span>def <span class="ident">available_moves</span></span>(<span>self) ‑> list[tuple[int, int]]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def available_moves(self) -&gt; list[tuple[int, int]]:
+    &#34;&#34;&#34;
+    Returns a list of available moves on the board.
+    :return: List of tuples representing available (row, column) positions.
+    &#34;&#34;&#34;
+    available = []
+    for row in range(3):
+        for col in range(3):
+            if self.board[row][col] == &#34;-&#34;:
+                available.append((row, col))
+
+    return available</code></pre>
+</details>
+<div class="desc"><p>Returns a list of available moves on the board.
+:return: List of tuples representing available (row, column) positions.</p></div>
+</dd>
+<dt id="complete.Board.is_full"><code class="name flex">
+<span>def <span class="ident">is_full</span></span>(<span>self) ‑> bool</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_full(self) -&gt; bool:
+    &#34;&#34;&#34;
+    Checks if the board is full (no empty spaces left).
+    :return: True if the board is full, False otherwise.
+    &#34;&#34;&#34;
+    return all(cell in &#34;XO&#34; for row in self.board for cell in row)</code></pre>
+</details>
+<div class="desc"><p>Checks if the board is full (no empty spaces left).
+:return: True if the board is full, False otherwise.</p></div>
+</dd>
+<dt id="complete.Board.is_winner"><code class="name flex">
+<span>def <span class="ident">is_winner</span></span>(<span>self, symbol: str) ‑> bool</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_winner(self, symbol: str) -&gt; bool:
+    &#34;&#34;&#34;
+    Checks if a given player has won the game.
+    :param symbol: The player&#39;s symbol (&#39;X&#39; or &#39;O&#39;).
+    :return: True if the player has won, False otherwise.
+    &#34;&#34;&#34;
+    for i in range(3):
+        if all(self.board[i][j] == symbol for j in range(3)) or \
+           all(self.board[j][i] == symbol for j in range(3)):
+            return True
+    return (
+        all(self.board[i][i] == symbol for i in range(3)) or
+        all(self.board[i][2 - i] == symbol for i in range(3))
+    )</code></pre>
+</details>
+<div class="desc"><p>Checks if a given player has won the game.
+:param symbol: The player's symbol ('X' or 'O').
+:return: True if the player has won, False otherwise.</p></div>
+</dd>
+<dt id="complete.Board.make_move"><code class="name flex">
+<span>def <span class="ident">make_move</span></span>(<span>self, row: int, col: int, symbol: str) ‑> bool</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def make_move(self, row: int, col: int, symbol: str) -&gt; bool:
+    &#34;&#34;&#34;
+    Places a move on the board if the position is available.
+    :param row: Row index (0-2).
+    :param col: Column index (0-2).
+    :param symbol: The player&#39;s symbol (&#39;X&#39; or &#39;O&#39;).
+    :return: True if the move was successful, False otherwise.
+    &#34;&#34;&#34;
+    if self.board[row][col] == &#34;-&#34;:
+        self.board[row][col] = symbol
+        return True
+    return False</code></pre>
+</details>
+<div class="desc"><p>Places a move on the board if the position is available.
+:param row: Row index (0-2).
+:param col: Column index (0-2).
+:param symbol: The player's symbol ('X' or 'O').
+:return: True if the move was successful, False otherwise.</p></div>
+</dd>
+<dt id="complete.Board.print_board"><code class="name flex">
+<span>def <span class="ident">print_board</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def print_board(self) -&gt; None:
+    &#34;&#34;&#34;
+    Prints the current state of the board with numbered positions.
+    &#34;&#34;&#34;
+    for row in range(3):
+        for col in range(3):
+            if self.board[row][col] in &#34;XO&#34;:
+                print(self.board[row][col])
+            else:
+                print(row * 3 + col + 1, end=&#34; &#34;)
+        print(&#34;&#34;)</code></pre>
+</details>
+<div class="desc"><p>Prints the current state of the board with numbered positions.</p></div>
+</dd>
+<dt id="complete.Board.undo_move"><code class="name flex">
+<span>def <span class="ident">undo_move</span></span>(<span>self, row: int, col: int) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def undo_move(self, row: int, col: int) -&gt; None:
+    &#34;&#34;&#34;
+    Reverts a move at the given position.
+    :param row: Row index (0-2).
+    :param col: Column index (0-2).
+    &#34;&#34;&#34;
+    self.board[row][col] = &#34;-&#34;</code></pre>
+</details>
+<div class="desc"><p>Reverts a move at the given position.
+:param row: Row index (0-2).
+:param col: Column index (0-2).</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="complete.Game"><code class="flex name class">
+<span>class <span class="ident">Game</span></span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Game:
+    &#34;&#34;&#34;
+    Manages the flow of the Tic-Tac-Toe game.
+    &#34;&#34;&#34;
+    def __init__(self) -&gt; None:
+        &#34;&#34;&#34;
+        Initializes the game with a board, human player, and AI player.
+        &#34;&#34;&#34;
+        self.board: Board = Board()
+        self.player: Player = Player(&#34;O&#34;)
+        self.ai: AIPlayer = AIPlayer(&#34;X&#34;)
+
+    def play(self) -&gt; None:
+        &#34;&#34;&#34;
+        Runs the game loop until there is a winner or a draw.
+        &#34;&#34;&#34;
+        self.board.print_board()
+        while True:
+            row, col = self.player.get_move(self.board)
+            self.board.make_move(row, col, self.player.symbol)
+            self.board.print_board()
+            if self.board.is_winner(self.player.symbol):
+                print(&#34;Congratulations, you won.&#34;)
+                break
+            if self.board.is_full():
+                print(&#34;Its draw.&#34;)
+                break
+
+            print(&#34;Computer thinking&#34;)
+            row, col = self.ai.get_move(self.board)
+            self.board.make_move(row, col, self.ai.symbol)
+            self.board.print_board()
+            if self.board.is_winner(self.ai.symbol):
+                print(&#34;Computer won!&#34;)
+                break
+            if self.board.is_full():
+                print(&#34;Its draw.&#34;)
+                break</code></pre>
+</details>
+<div class="desc"><p>Manages the flow of the Tic-Tac-Toe game.</p>
+<p>Initializes the game with a board, human player, and AI player.</p></div>
+<h3>Methods</h3>
+<dl>
+<dt id="complete.Game.play"><code class="name flex">
+<span>def <span class="ident">play</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def play(self) -&gt; None:
+    &#34;&#34;&#34;
+    Runs the game loop until there is a winner or a draw.
+    &#34;&#34;&#34;
+    self.board.print_board()
+    while True:
+        row, col = self.player.get_move(self.board)
+        self.board.make_move(row, col, self.player.symbol)
+        self.board.print_board()
+        if self.board.is_winner(self.player.symbol):
+            print(&#34;Congratulations, you won.&#34;)
+            break
+        if self.board.is_full():
+            print(&#34;Its draw.&#34;)
+            break
+
+        print(&#34;Computer thinking&#34;)
+        row, col = self.ai.get_move(self.board)
+        self.board.make_move(row, col, self.ai.symbol)
+        self.board.print_board()
+        if self.board.is_winner(self.ai.symbol):
+            print(&#34;Computer won!&#34;)
+            break
+        if self.board.is_full():
+            print(&#34;Its draw.&#34;)
+            break</code></pre>
+</details>
+<div class="desc"><p>Runs the game loop until there is a winner or a draw.</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="complete.Player"><code class="flex name class">
+<span>class <span class="ident">Player</span></span>
+<span>(</span><span>symbol: str)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Player:
+    &#34;&#34;&#34;
+    Represents a human player in the Tic-Tac-Toe game.
+    &#34;&#34;&#34;
+    def __init__(self, symbol: str) -&gt; None:
+        &#34;&#34;&#34;
+        Initializes the player with a given symbol (&#39;X&#39; or &#39;O&#39;).
+        :param symbol: The player&#39;s symbol.
+        &#34;&#34;&#34;
+        self.symbol: str = symbol
+
+    def get_move(self, board: Board) -&gt; tuple[int, int]:
+        &#34;&#34;&#34;
+        Prompts the player to enter a move.
+        :param board: The game board instance.
+        :return: A tuple (row, column) representing the player&#39;s move.
+        &#34;&#34;&#34;
+        while True:
+            try:
+                move = int(input(&#34;Enter a number between 1 and 9: &#34;)) - 1
+                row, col = move // 3, move % 3
+                if (row, col) in board.available_moves():
+                    return row, col
+                print(&#34;Invalid move, try again.&#34;)
+            except ValueError:
+                print(&#34;Enter a number between 1 and 9.&#34;)</code></pre>
+</details>
+<div class="desc"><p>Represents a human player in the Tic-Tac-Toe game.</p>
+<p>Initializes the player with a given symbol ('X' or 'O').
+:param symbol: The player's symbol.</p></div>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="complete.AIPlayer" href="#complete.AIPlayer">AIPlayer</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="complete.Player.get_move"><code class="name flex">
+<span>def <span class="ident">get_move</span></span>(<span>self, board: <a title="complete.Board" href="#complete.Board">Board</a>) ‑> tuple[int, int]</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_move(self, board: Board) -&gt; tuple[int, int]:
+    &#34;&#34;&#34;
+    Prompts the player to enter a move.
+    :param board: The game board instance.
+    :return: A tuple (row, column) representing the player&#39;s move.
+    &#34;&#34;&#34;
+    while True:
+        try:
+            move = int(input(&#34;Enter a number between 1 and 9: &#34;)) - 1
+            row, col = move // 3, move % 3
+            if (row, col) in board.available_moves():
+                return row, col
+            print(&#34;Invalid move, try again.&#34;)
+        except ValueError:
+            print(&#34;Enter a number between 1 and 9.&#34;)</code></pre>
+</details>
+<div class="desc"><p>Prompts the player to enter a move.
+:param board: The game board instance.
+:return: A tuple (row, column) representing the player's move.</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="complete.AIPlayer" href="#complete.AIPlayer">AIPlayer</a></code></h4>
+<ul class="">
+<li><code><a title="complete.AIPlayer.get_move" href="#complete.AIPlayer.get_move">get_move</a></code></li>
+<li><code><a title="complete.AIPlayer.minimax" href="#complete.AIPlayer.minimax">minimax</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="complete.Board" href="#complete.Board">Board</a></code></h4>
+<ul class="two-column">
+<li><code><a title="complete.Board.available_moves" href="#complete.Board.available_moves">available_moves</a></code></li>
+<li><code><a title="complete.Board.is_full" href="#complete.Board.is_full">is_full</a></code></li>
+<li><code><a title="complete.Board.is_winner" href="#complete.Board.is_winner">is_winner</a></code></li>
+<li><code><a title="complete.Board.make_move" href="#complete.Board.make_move">make_move</a></code></li>
+<li><code><a title="complete.Board.print_board" href="#complete.Board.print_board">print_board</a></code></li>
+<li><code><a title="complete.Board.undo_move" href="#complete.Board.undo_move">undo_move</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="complete.Game" href="#complete.Game">Game</a></code></h4>
+<ul class="">
+<li><code><a title="complete.Game.play" href="#complete.Game.play">play</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="complete.Player" href="#complete.Player">Player</a></code></h4>
+<ul class="">
+<li><code><a title="complete.Player.get_move" href="#complete.Player.get_move">get_move</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.6</a>.</p>
+</footer>
+</body>
+</html>
