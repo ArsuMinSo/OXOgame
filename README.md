@@ -58,7 +58,7 @@ python main.py
 ├── aiplayer.py    # AI player implementing the minimax algorithm
 ├── main.py        # Game loop and application entry point
 ```
-
+[Full documentation](./index.hml)
 ---
 
 ## AI Implementation
