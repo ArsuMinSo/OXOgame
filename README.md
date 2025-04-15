@@ -1,7 +1,3 @@
-Sure! Here's a more professional version of the `README.md` suitable for a portfolio or GitHub project:
-
----
-
 # Tic-Tac-Toe: Human vs AI (Minimax Algorithm)
 
 A command-line implementation of the classic Tic-Tac-Toe game, featuring a human player competing against an AI opponent powered by the **Minimax algorithm**.
@@ -58,7 +54,9 @@ python main.py
 ├── aiplayer.py    # AI player implementing the minimax algorithm
 ├── main.py        # Game loop and application entry point
 ```
-[Full documentation](./index.hml)
+
+[Full documentation](./content/doc/doc.html)
+
 ---
 
 ## AI Implementation
