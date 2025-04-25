@@ -208,7 +208,3 @@ class Game:
             if self.board.is_full():
                 print("Its draw.")
                 break
-
-
-if __name__ == "__main__":
-    Game().play()

@@ -25,7 +25,7 @@ class Board:
 
     def is_full(self) -> bool:
         """
-        Checks if the board is full (no empty spaces left).
+        Checks if the board is full (i.e., no empty spaces left).
         :return: True if the board is full, False otherwise.
         """
         return all(cell in "XO" for row in self.board for cell in row)

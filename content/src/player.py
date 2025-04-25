@@ -14,7 +14,7 @@ class Player:
 
     def get_move(self, board: Board) -> tuple[int, int]:
         """
-        Prompts the player to enter a move.
+        Prompts the player to enter a move (1-9) corresponding to the available cells.
         :param board: The game board instance.
         :return: A tuple (row, column) representing the player's move.
         """
