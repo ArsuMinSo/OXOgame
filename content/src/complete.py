@@ -25,7 +25,7 @@ class Board:
 
     def is_full(self) -> bool:
         """
-        Checks if the board is full (no empty spaces left).
+        Checks if the board is full (i.e., no empty spaces left).
         :return: True if the board is full, False otherwise.
         """
         return all(cell in "XO" for row in self.board for cell in row)
@@ -93,7 +93,7 @@ class Player:
 
     def get_move(self, board: Board) -> tuple[int, int]:
         """
-        Prompts the player to enter a move.
+        Prompts the player to enter a move (1-9) corresponding to the available cells.
         :param board: The game board instance.
         :return: A tuple (row, column) representing the player's move.
         """
@@ -110,9 +110,13 @@ class Player:
 
 class AIPlayer(Player):
     """
-    Represents an AI player using the minimax algorithm.
+    Represents an AI player using the minimax algorithm to decide the best move.
     """
     def __init__(self, symbol: str) -> None:
+        """
+        Initializes the AI player with the given symbol ('X' or 'O') and uses the minimax algorithm for decision-making.
+        :param symbol: The AI player's symbol.
+        """
         super().__init__(symbol)
 
     def minimax(self, board: Board, depth: int, is_maximizing: bool) -> int:
@@ -121,7 +125,7 @@ class AIPlayer(Player):
         :param board: The game board instance.
         :param depth: The current depth of recursion.
         :param is_maximizing: Boolean indicating of maximizing or minimizing.
-        :return: The best score for the current state.
+        :return: The score for the current state (1 for win, -1 for loss, 0 for draw).
         """
         opponent = "O" if self.symbol == "X" else "X"
         if board.is_winner(self.symbol):
