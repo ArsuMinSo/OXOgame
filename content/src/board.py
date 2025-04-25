@@ -18,7 +18,7 @@ class Board:
         for row in range(3):
             for col in range(3):
                 if self.board[row][col] in "XO":
-                    print(self.board[row][col])
+                    print(self.board[row][col], end=" ")
                 else:
                     print(row * 3 + col + 1, end=" ")
             print("")
