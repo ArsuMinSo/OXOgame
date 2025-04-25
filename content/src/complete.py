@@ -209,6 +209,3 @@ class Game:
                 print("Its draw.")
                 break
 
-
-if __name__ == "__main__":
-    Game().play()
