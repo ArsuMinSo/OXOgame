@@ -55,7 +55,7 @@ python main.py
 ├── main.py        # Game loop and application entry point
 ```
 
-[Full documentation](./content/doc/doc.html)
+[Full documentation](https://github.com/ArsuMinSo/OXOgame/wiki/Tic‐Tac‐Toe-with-AI-(Minimax))
 
 ---
 
