@@ -24,8 +24,8 @@ A command-line implementation of the classic Tic-Tac-Toe game, featuring a human
 Clone the repository and run the main script:
 
 ```bash
-git clone https://github.com/your-username/tic-tac-toe-ai.git
-cd tic-tac-toe-ai
+git clone https://github.com/ArsuMinSo/OXOgame.git
+cd OXOgame
 python main.py
 ```
 
